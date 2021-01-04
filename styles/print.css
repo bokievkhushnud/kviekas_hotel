@@ -1,0 +1,27 @@
+/* Styling table in about.html page */
+.table-container{
+    width: 100%;
+    overflow-x:auto;
+    margin: 4rem 0;
+}
+table,td,th{
+    border: none;
+}
+table{
+    border-spacing: 0;
+    width: 100%;
+    min-width: 700px;
+}
+td:not(:last-child){
+    text-align: center;
+}
+th{
+    background-color: rgb(92, 170, 89);
+}
+tr:nth-child(even){
+    background: #CCC;
+}
+tr{
+    height: 2rem;
+}
+
