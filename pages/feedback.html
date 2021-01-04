@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Kevikas Hotel | Feedback</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/about.php" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/admin.php" class="nav-link">Admin</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="feedback">
+            <div class="container">
+                <h5 class="section-head h-head">
+                    <span class="heading">Feedback Form</span>
+                    <span class="sub-heading">We appreciate your opinion !!! </span>
+                </h5>
+                <form action="../phpfiles/feedback.php" method="POST" class="contact-form feedback-form">
+                    <div class="input-group">
+                        <label for="fname" class="input-label">First Name</label>
+                        <input type="text" class="input" id="fname" name="fname" onkeydown="validate()" >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small></small>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname" class="input-label">Last Name</label>
+                        <input type="text" class="input" id="lname" name="lname" onkeydown="validate()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" class="input" id="email" name="email" onkeypress="validate()" onchange="validate()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="gender-radio" class="input-label">Gender</label>
+                        <div class="gender" id="gender-radio">
+                            <div>
+                                <label for="male" class="input-label gen-header" >Male</label>
+                                <input type="radio" name="gender" value="male" class="check " id="male" checked >
+                            </div>
+                            <div>
+                                <label for="female" class="input-label gen-header">Female</label>
+                                <input type="radio" name="gender" value="female" class="check" id="female">
+                            </div>
+                            <div>
+                                <label for="other" class="input-label gen-header">Other</label>
+                                <input type="radio" name="gender" value="other" class="check" id="other">
+                            </div>
+                        </div>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="gender-check" class="input-label">What would you want to change</label>
+                        <div class="gender" id="gender-check">
+                            <div>
+                                <label for="tel" class="input-label gen-header">Services</label>
+                                <input type="checkbox" class="check" name="improved[]" value="services" id="tel">
+                            </div>
+                            <div>
+                                <label for="tel" class="input-label gen-header">Food</label>
+                                <input type="checkbox" class="check" name="improved[]" value="food" id="tel">
+                            </div>
+
+                            <div>
+                                <label for="tel" class="input-label gen-header">WIFI</label>
+                                <input type="checkbox" class="check" name="improved[]" value="wifi" id="tel">
+                            </div>
+
+                            <div>
+                                <label for="tel" class="input-label gen-header">Room</label>
+                                <input type="checkbox" value="room" name="improved[]" class="check" id="tel">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="input-group">
+                        <label for="adults" class="input-label">Rate us from 1 to 10</label>
+                        <select name="rate" id="adults" class="opt-feedback input">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="feedback" id="" rows="10" cols="30" class="text-feedback input"
+                            placeholder="Other thoughts (optional)"></textarea>
+                    </div>
+                    <div class="error-message">
+                        <h3></h3>
+                    </div>
+                    <button type="submit" class="btn form-btn  btn-purple book-f-btn" onclick="validate(event)">Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo.png" alt="logo" class="logo-image">
+                    </a>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas minima recusandae alias quis
+                        animi facere voluptates odio dolore ipsum eum, pariatur iste numquam, ab deserunt, neque impedit
+                        earum quia officiis!
+                    </p>
+                </div>
+                <div class="social-meida-wrap">
+                    <h4 class="footer-heading">Follow us</h4>
+                    <div class="social-media">
+                        <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+
+</html>

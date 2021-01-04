@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Kevikas Hotel | Booking</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/about.php" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/admin.php" class="nav-link">Admin</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="booking booking-p">
+            <div class="container">
+                <h5 class="section-head book-head">
+                    <span class="heading">Booking Form</span>
+                    <span class="sub-heading">Book your favourite hotel</span>
+                </h5>
+                <form action="../phpfiles/booking.php" method="POST" class="form book-form booking-f">
+                    <div class="input-group">
+                        <label for="fname" class="input-label">First Name</label>
+                        <input type="text" class="input" name="firstname" id="firstname" onkeydown="validateBooking()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname" class="input-label">Last Name</label>
+                        <input type="text" class="input" name="lastname" id="lastname" onkeydown="validateBooking()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" class="input" name="emailb" id="emailb" onkeydown="validateBooking()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="tel" class="input-label">Phone Number</label>
+                        <input type="tel" class="input" name="phone" id="tel" onkeydown="validateBooking()" onchange="validateBooking()">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="room" class="input-label">Choose a room</label>
+                        <select name="room" id="room" class="options">
+                           <option value="single">Single</option>
+                           <option value="double">Double</option>
+                           <option value="quad">Quad</option>
+                           <option value="queen">Queen</option>
+                           <option value="king">King</option>
+                        </select>
+                    </div>
+                    <div class="input-group ">
+                        <label for="check-in" class="input-label">Check In</label>
+                        <input type="date" class="input" name="checkin" id="check-in" onchange="validateBooking()">
+                        <small></small>
+                    </div>
+                    <div class="input-group">
+                        <label for="check-out" class="input-label">Check Out</label>
+                        <input type="date" class="input" name="checkout" id="check-out" onchange="validateBooking()">
+                        <small></small>
+                    </div>
+                    <div class="input-group">
+                        <label for="adults" class="input-label">Adults</label>
+                        <select name="adults" id="adults" class="options">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="children" class="input-label">Children</label>
+                        <select name="children" id="children" class="options">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="error-message-b">
+                        <h3></h3>
+                    </div>
+                    <button type="submit" class="btn form-btn btn-purple book-f-btn" onclick="validateBooking(event)">Book Now
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo.png" alt="logo" class="logo-image">
+                    </a>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas minima recusandae alias quis
+                        animi facere voluptates odio dolore ipsum eum, pariatur iste numquam, ab deserunt, neque impedit
+                        earum quia officiis!
+                    </p>
+                </div>
+                <div class="social-meida-wrap">
+                    <h4 class="footer-heading">Follow us</h4>
+                    <div class="social-media">
+                        <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="../scripts/bookingvalidation.js"></script>
+</body>
+</html>

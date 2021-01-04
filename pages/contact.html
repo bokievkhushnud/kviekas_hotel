@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Kevikas Hotel | Contacts</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/about.php" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="service.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../phpfiles/admin.php" class="nav-link">Admin</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h5 class="section-head h-head">
+                    <span class="heading">Contact</span>
+                    <span class="sub-heading">Get in touch with us</span>
+                </h5>
+                <div class="our-contact">
+                    <div class="left">
+                        <div class="our-info">
+                            <label for="phone-num"><i class="fas fa-phone sm-link link-cont"></i></label>
+                            <a href="tel:+992501866090" id="phone-num">+992 501866090</a>
+                        </div>
+                        <div class="our-info">
+                            <label for="whatsapp"><i class="fab fa-whatsapp sm-link link-cont"></i></label>
+                            <a href="#" id="whatsapp sm-link">+992 501922307</a>
+                        </div>
+                        <div class="our-info">
+                            <label for="mail-add"><i class="fas fa-envelope sm-link link-cont"></i></label>
+                            <a href="mailto:smth@mail.ru" id="mail-add">smth@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442.1322333623761!2d71.5526945916108!3d37.4913060018234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38c6956c6a8168a7%3A0x644885b23e24c21b!2sKivekas%20Hotel!5e0!3m2!1sru!2s!4v1606565027753!5m2!1sru!2s"
+                            frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="traveler-wrap">
+                        <img src="../images/traveler_1.png" alt="treveler" class="traveler-img">
+                    </div>
+                    <form action="../phpfiles/contact.php" method="POST" class="form contact-form">
+                        <div class="input-group-wrap">
+                            <div class="input-group">
+                                <input type="text" name="name" id="cname" class="input" placeholder="name" onkeypress="validateContact()" onchange="validateContact()">
+                                <span class="bar"></span>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="input-group ">
+                                <input type="email" name="email" id="cemail" class="input" placeholder="email" onkeypress="validateContact()" onchange="validateContact()">
+                                <span class="bar"></span>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="subject" id="subject" class="input" placeholder="subject" onkeypress="validateContact()" onchange="validateContact()">
+                            <span class="bar"></span>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="input-group ">
+                            <textarea name="con_text" id="ctext" cols="30" rows="10" class="input" onkeypress="validateContact()" onchange="validateContact()"></textarea>
+                            <span class="bar"></span>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        
+                        </div>
+                        <button type="submit" class="btn form-btn btn-purple" onclick="validateContact(event)">Send Message
+                            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo.png" alt="logo" class="logo-image">
+                    </a>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas minima recusandae alias quis
+                        animi facere voluptates odio dolore ipsum eum, pariatur iste numquam, ab deserunt, neque impedit
+                        earum quia officiis!
+                    </p>
+                </div>
+                <div class="social-meida-wrap">
+                    <h4 class="footer-heading">Follow us</h4>
+                    <div class="social-media">
+                        <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="sm-link"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="../scripts/contactValidation.js"></script>
+</body>
+
+</html>
